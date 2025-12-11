@@ -23,7 +23,6 @@
       o = "open .";
       e = "nvim";
       reload = "exec fish";
-      claude = "/Users/itsarminbabaei/.claude/local/claude";
       ls = "eza -la --icons --git --group-directories-first --header";
       la = "eza -la --icons --git --group-directories-first --header";
       ll = "eza -la --icons --git --group-directories-first --header";
