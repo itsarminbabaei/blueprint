@@ -200,11 +200,11 @@
       options = { desc = "Open in vertical split"; noremap = true; silent = true; };
     }
 
-    # Snacks Explorer
+    # File Explorer (Netrw)
     {
       mode = "n";
       key = "<leader>e";
-      action = "<Cmd>lua Snacks.explorer()<CR>";
+      action = "<Cmd>Explore<CR>";
       options = { desc = "File Explorer"; };
     }
     {
@@ -573,6 +573,8 @@
       action = "<Cmd>DBUIRenameBuffer<CR>";
       options = { desc = "Rename database buffer"; };
     }
+
+
 
     # Obsidian
     {

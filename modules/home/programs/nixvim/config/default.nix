@@ -21,9 +21,9 @@
      ./git.nix
      ./glow.nix
      ./icons.nix
-     ./noice.nix
-     ./obsidian.nix
-     ./airline.nix
+      ./noice.nix
+      ./obsidian.nix
+      ./airline.nix
      ./telescope.nix
      ./harpoon.nix
     ./oil.nix
