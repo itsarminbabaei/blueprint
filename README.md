@@ -128,23 +128,23 @@ blueprint/
 └── README.md (this file)
 ```
 
-### Installed Plugins (38 total)
+### Installed Plugins (37 total)
 
 **Completion**: blink-cmp, blink-compat, luasnip, lspconfig, supermaven
 
-**UI**: alpha, bufferline, lualine, noice, which-key, snacks, fidget
+**UI**: alpha, airline, bufferline, noice, which-key, snacks, fidget
 
-**Navigation**: telescope, harpoon, oil, tmux-navigator, flash, navbuddy
+**Navigation**: telescope, harpoon, oil (+ oil-git-status), tmux-navigator, flash, navbuddy
 
-**Git**: gitsigns, diffview, fugitive, lazygit, undotree
+**Git**: gitsigns, lazygit
 
 **Code Quality**: conform, trouble, neotest, dap (+ dap-ui, dap-go, dap-virtual-text)
 
 **Treesitter**: treesitter, treesitter-textobjects, treesitter-context, twilight
 
-**Text Editing**: comment, mini (ai, surround, pairs), spectre, render-markdown
+**Text Editing**: comment, mini (ai, surround, pairs), render-markdown
 
-**Other**: editorconfig, sleuth, persistence, arrow, lazydev, pbcopy
+**Other**: arrow, colorscheme, editorconfig, icons, lazydev, pbcopy, persistence, sleuth
 
 ### Language Servers
 
@@ -254,11 +254,6 @@ All keybindings are documented via [which-key](https://github.com/folke/which-ke
 - `r` — Remote flash (operator pending)
 - `R` — Treesitter search
 - `<C-s>` (command mode) — Toggle flash search
-
-**Find & Replace** (`<leader>R`):
-- `r` — Open spectre
-- `w` — Replace word
-- `f` — Replace in buffer
 
 **Session Management** (`<leader>q`):
 - `s` — Load current session
