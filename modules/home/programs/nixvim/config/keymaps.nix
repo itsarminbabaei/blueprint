@@ -130,6 +130,12 @@
     }
     {
       mode = "n";
+      key = "<leader>ft";
+      action = "<Cmd>TodoTelescope<CR>";
+      options = { desc = "Find TODOs"; };
+    }
+    {
+      mode = "n";
       key = "<leader>fb";
       action = "<Cmd>Telescope buffers<CR>";
       options = { desc = "Find buffers"; };
@@ -199,6 +205,26 @@
       key = "<leader>e";
       action = "<Cmd>lua Snacks.explorer()<CR>";
       options = { desc = "File Explorer"; };
+    }
+    {
+      mode = "n";
+      key = "<C-\\>";
+      action = "<Cmd>ToggleTerm<CR>";
+      options = { desc = "Toggle Terminal"; };
+    }
+
+    # Buffer Management
+    {
+      mode = "n";
+      key = "<leader>bd";
+      action = "<Cmd>Bdelete<CR>";
+      options = { desc = "Delete buffer"; };
+    }
+    {
+      mode = "n";
+      key = "<leader>bD";
+      action = "<Cmd>Bdelete!<CR>";
+      options = { desc = "Force delete buffer"; };
     }
 
     # Conform
@@ -477,6 +503,138 @@
       key = "<leader>xQ";
       action = "<cmd>Trouble qflist toggle<cr>";
       options = { desc = "Quickfix List (Trouble)"; };
+    }
+
+    # Spectre (Find & Replace)
+    {
+      mode = "n";
+      key = "<leader>R";
+      action = "<Cmd>lua require('spectre').open()<CR>";
+      options = { desc = "Open Spectre"; };
+    }
+    {
+      mode = "n";
+      key = "<leader>rw";
+      action = "<Cmd>lua require('spectre').open_visual({select_word=true})<CR>";
+      options = { desc = "Search current word"; };
+    }
+    {
+      mode = "n";
+      key = "<leader>rf";
+      action = "<Cmd>lua require('spectre').open_file_search()<CR>";
+      options = { desc = "Search in current file"; };
+    }
+
+    # Color Tools
+    {
+      mode = "n";
+      key = "<leader>zp";
+      action = "<Cmd>CccPick<CR>";
+      options = { desc = "Color picker"; };
+    }
+    {
+      mode = "n";
+      key = "<leader>zc";
+      action = "<Cmd>CccConvert<CR>";
+      options = { desc = "Convert color format"; };
+    }
+
+    # Cloak (Hide sensitive data)
+    {
+      mode = "n";
+      key = "<leader>zt";
+      action = "<Cmd>CloakToggle<CR>";
+      options = { desc = "Toggle cloak"; };
+    }
+
+    # Colorizer
+    {
+      mode = "n";
+      key = "<leader>uz";
+      action = "<Cmd>ColorizerToggle<CR>";
+      options = { desc = "Toggle colorizer"; };
+    }
+
+    # Glow (Markdown preview)
+    {
+      mode = "n";
+      key = "<leader>mg";
+      action = "<Cmd>Glow<CR>";
+      options = { desc = "Preview markdown with glow"; };
+    }
+
+    # WTF (Diagnostic debugging)
+    {
+      mode = "n";
+      key = "<leader>wd";
+      action = "<Cmd>WTFDiagnostics<CR>";
+      options = { desc = "Open WTF diagnostics"; };
+    }
+
+    # Vim Dadbod (Database)
+    {
+      mode = "n";
+      key = "<leader>db";
+      action = "<Cmd>DBUIToggle<CR>";
+      options = { desc = "Toggle database UI"; };
+    }
+    {
+      mode = "n";
+      key = "<leader>df";
+      action = "<Cmd>DBUIFindBuffer<CR>";
+      options = { desc = "Find database buffer"; };
+    }
+    {
+      mode = "n";
+      key = "<leader>dr";
+      action = "<Cmd>DBUIRenameBuffer<CR>";
+      options = { desc = "Rename database buffer"; };
+    }
+
+    # Obsidian
+    {
+      mode = "n";
+      key = "<leader>on";
+      action = "<Cmd>ObsidianNew<CR>";
+      options = { desc = "Create new note"; };
+    }
+    {
+      mode = "n";
+      key = "<leader>oo";
+      action = "<Cmd>ObsidianOpen<CR>";
+      options = { desc = "Open in Obsidian app"; };
+    }
+    {
+      mode = "n";
+      key = "<leader>os";
+      action = "<Cmd>ObsidianSearch<CR>";
+      options = { desc = "Search notes"; };
+    }
+    {
+      mode = "n";
+      key = "<leader>od";
+      action = "<Cmd>ObsidianToday<CR>";
+      options = { desc = "Open daily note"; };
+    }
+
+    # Kulala (HTTP client)
+    {
+      mode = "n";
+      key = "<leader>kr";
+      action = "<Cmd>lua require('kulala').run()<CR>";
+      options = { desc = "Run HTTP request"; };
+    }
+    {
+      mode = "n";
+      key = "<leader>ka";
+      action = "<Cmd>lua require('kulala').run_all()<CR>";
+      options = { desc = "Run all HTTP requests"; };
+    }
+    {
+      mode = "n";
+      key = "<leader>ki";
+      action = "<Cmd>lua require('kulala').inspect()<CR>";
+      options = { desc = "Inspect HTTP request"; };
     }
 
     # Treesitter Incremental Selection

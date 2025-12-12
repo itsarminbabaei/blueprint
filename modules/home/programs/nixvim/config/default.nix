@@ -1,43 +1,66 @@
 {
   # Import all your configuration modules here
   imports = [
-    ./bufferline.nix
-    ./pbcopy.nix
-    ./colorscheme.nix
-    ./keymaps.nix
-    ./treesitter.nix
+     ./bufferline.nix
+     ./bufdelete.nix
+     ./bullets.nix
+     ./pbcopy.nix
+     ./colorscheme.nix
+     ./ccc.nix
+     ./cloak.nix
+     ./colorizer.nix
+     ./keymaps.nix
+     ./kulala.nix
+     ./treesitter.nix
     ./snacks.nix
     ./trouble.nix
     ./blink.nix
     ./conform.nix
     ./lspconfig.nix
     ./which-key.nix
-    ./git.nix
-    ./icons.nix
-    ./noice.nix
-    ./airline.nix
-    ./telescope.nix
-    ./harpoon.nix
+     ./git.nix
+     ./glow.nix
+     ./icons.nix
+     ./noice.nix
+     ./obsidian.nix
+     ./airline.nix
+     ./telescope.nix
+     ./tailwind-tools.nix
+     ./harpoon.nix
     ./oil.nix
-    ./oil-git-status.nix
-    ./dap.nix
+     ./oil-git-status.nix
+     ./opencode.nix
+     ./dap.nix
     ./render-markdown.nix
-    ./neotest.nix
-    ./navbuddy.nix
-    ./treesitter-context.nix
-    ./lazygit.nix
-    ./flash.nix
+     ./neotest.nix
+     ./navic.nix
+     ./nix.nix
+     ./aerial.nix
+     ./navbuddy.nix
+     ./treesitter-context.nix
+     ./ts-autotag.nix
+     ./lazygit.nix
+     ./leap.nix
+     ./flash.nix
     ./mini.nix
     ./persistence.nix
-    ./tmux-navigator.nix
-    ./comment.nix
-    ./sleuth.nix
-    ./fidget.nix
+     ./tmux-navigator.nix
+     ./toggleterm.nix
+     ./todo-comments.nix
+     ./comment.nix
+     ./sleuth.nix
+     ./spectre.nix
+     ./fidget.nix
     ./lazydev.nix
     ./editorconfig.nix
     ./supermaven.nix
-    ./alpha.nix
-    ./arrow.nix
-    ./twilight.nix
-  ];
+     ./startify.nix
+     ./arrow.nix
+     ./twilight.nix
+     ./vimtex.nix
+     ./wtf.nix
+     ./vim-dadbod.nix
+     ./vim-dadbod-completion.nix
+     ./vim-dadbod-ui.nix
+    ];
 }

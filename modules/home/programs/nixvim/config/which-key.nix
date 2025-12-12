@@ -101,6 +101,48 @@
           group = "Find";
           icon = "󰈞 ";
         }
+        # Database
+        {
+          __unkeyed-1 = "<leader>d";
+          group = "Database";
+          icon = "󰆼 ";
+        }
+        # Obsidian
+        {
+          __unkeyed-1 = "<leader>o";
+          group = "Obsidian";
+          icon = "󰓹 ";
+        }
+        # Kulala (HTTP)
+        {
+          __unkeyed-1 = "<leader>k";
+          group = "Kulala";
+          icon = "󰖟 ";
+        }
+        # Buffer Management
+        {
+          __unkeyed-1 = "<leader>b";
+          group = "Buffer";
+          icon = "󰈚 ";
+        }
+        # Color Tools
+        {
+          __unkeyed-1 = "<leader>z";
+          group = "Color";
+          icon = "󰏘 ";
+        }
+        # WTF (Debug)
+        {
+          __unkeyed-1 = "<leader>w";
+          group = "WTF";
+          icon = "󰋗 ";
+        }
+        # Replace/Find & Replace
+        {
+          __unkeyed-1 = "<leader>R";
+          group = "Replace";
+          icon = "󰛔 ";
+        }
         {
           __unkeyed-1 = "<leader>ff";
           desc = "Files";
@@ -114,8 +156,32 @@
           desc = "Buffers";
         }
         {
-          __unkeyed-1 = "<leader>fh";
-          desc = "Help";
+          __unkeyed-1 = "<leader>bd";
+          desc = "Delete buffer";
+        }
+        {
+          __unkeyed-1 = "<leader>bD";
+          desc = "Force delete buffer";
+        }
+          {
+            __unkeyed-1 = "<leader>fh";
+            desc = "Help tags";
+          }
+        {
+          __unkeyed-1 = "<leader>ft";
+          desc = "Find TODOs";
+        }
+        {
+          __unkeyed-1 = "<leader>R";
+          desc = "Open Spectre";
+        }
+        {
+          __unkeyed-1 = "<leader>rw";
+          desc = "Replace word";
+        }
+        {
+          __unkeyed-1 = "<leader>rf";
+          desc = "Replace in file";
         }
 
         # LSP
@@ -354,7 +420,71 @@
         }
         {
           __unkeyed-1 = "<leader>ub";
-          desc = "Dark Background";
+          desc = "Dark background";
+        }
+        {
+          __unkeyed-1 = "<leader>uz";
+          desc = "Toggle colorizer";
+        }
+        {
+          __unkeyed-1 = "<leader>mg";
+          desc = "Markdown preview";
+        }
+        {
+          __unkeyed-1 = "<leader>wd";
+          desc = "WTF diagnostics";
+        }
+        {
+          __unkeyed-1 = "<leader>on";
+          desc = "New note";
+        }
+        {
+          __unkeyed-1 = "<leader>oo";
+          desc = "Open in app";
+        }
+        {
+          __unkeyed-1 = "<leader>os";
+          desc = "Search notes";
+        }
+        {
+          __unkeyed-1 = "<leader>od";
+          desc = "Daily note";
+        }
+        {
+          __unkeyed-1 = "<leader>db";
+          desc = "Toggle database UI";
+        }
+        {
+          __unkeyed-1 = "<leader>df";
+          desc = "Find database buffer";
+        }
+        {
+          __unkeyed-1 = "<leader>dr";
+          desc = "Rename database buffer";
+        }
+        {
+          __unkeyed-1 = "<leader>kr";
+          desc = "Run HTTP request";
+        }
+        {
+          __unkeyed-1 = "<leader>ka";
+          desc = "Run all requests";
+        }
+        {
+          __unkeyed-1 = "<leader>ki";
+          desc = "Inspect request";
+        }
+        {
+          __unkeyed-1 = "<leader>zp";
+          desc = "Color picker";
+        }
+        {
+          __unkeyed-1 = "<leader>zc";
+          desc = "Convert color";
+        }
+        {
+          __unkeyed-1 = "<leader>zt";
+          desc = "Toggle cloak";
         }
         {
           __unkeyed-1 = "<leader>uh";
