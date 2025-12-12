@@ -26,10 +26,10 @@
       };
       ui = {
         enable = true;
-        checkboxes = {
-          " " = { char = "󰄱"; hl_group = "ObsidianTodo"; };
-          "x" = { char = "󰄲"; hl_group = "ObsidianDone"; };
-        };
+      };
+      checkboxes = {
+        " " = { char = "󰄱"; hl_group = "ObsidianTodo"; };
+        "x" = { char = "󰄲"; hl_group = "ObsidianDone"; };
       };
     };
   };
