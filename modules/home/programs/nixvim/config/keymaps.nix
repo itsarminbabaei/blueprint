@@ -209,7 +209,7 @@
     }
     {
       mode = "n";
-      key = "<C-\\>";
+      key = "<C-t>";
       action = "<Cmd>ToggleTerm<CR>";
       options = { desc = "Toggle Terminal"; };
     }
