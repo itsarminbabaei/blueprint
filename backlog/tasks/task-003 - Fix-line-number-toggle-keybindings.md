@@ -4,9 +4,11 @@ title: Fix line number toggle keybindings
 status: Done
 assignee: []
 created_date: '2025-12-12 05:45'
-updated_date: '2025-12-12 05:46'
+updated_date: '2025-12-12 05:47'
 labels:
   - ui
+  - keymaps
+  - bug
 dependencies: []
 priority: medium
 ---
