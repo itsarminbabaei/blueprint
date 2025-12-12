@@ -602,25 +602,7 @@
       options = { desc = "Open daily note"; };
     }
 
-    # Kulala (HTTP client)
-    {
-      mode = "n";
-      key = "<leader>kr";
-      action = "<Cmd>lua require('kulala').run()<CR>";
-      options = { desc = "Run HTTP request"; };
-    }
-    {
-      mode = "n";
-      key = "<leader>ka";
-      action = "<Cmd>lua require('kulala').run_all()<CR>";
-      options = { desc = "Run all HTTP requests"; };
-    }
-    {
-      mode = "n";
-      key = "<leader>ki";
-      action = "<Cmd>lua require('kulala').inspect()<CR>";
-      options = { desc = "Inspect HTTP request"; };
-    }
+
 
     # Treesitter Incremental Selection
     {

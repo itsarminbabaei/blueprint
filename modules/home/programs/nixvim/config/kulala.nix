@@ -4,7 +4,7 @@
 
 {
   plugins.kulala = {
-    enable = true;
+    enable = false; # Disabled due to persistent tree-sitter compilation errors in Nix
     settings = {
       # Default environment variables
       default_env = "dev";
