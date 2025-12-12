@@ -21,7 +21,6 @@
   ];
   programs.nixvim = {
     enable = true;
-    globals.mapleader = " ";
     imports = [ ./programs/nixvim/config/default.nix ];
 
     plugins.spectre.enable = false; # Disable Spectre due to ARM64 build issues

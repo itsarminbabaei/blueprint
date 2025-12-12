@@ -1,4 +1,5 @@
 {
+  globals.mapleader = " ";
   keymaps = [
     # Core Keybinds
     # Move selected line / block of text in visual mode
