@@ -56,7 +56,6 @@
       # Window options
       win_options = {
         statusline = "";
-        showtabline = 0;
         wrap = false;
         signcolumn = "yes:2";
         cursorcolumn = false;
