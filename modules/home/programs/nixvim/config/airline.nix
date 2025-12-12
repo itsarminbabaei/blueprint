@@ -11,8 +11,8 @@
       section_b = null;
       section_c = null;
       section_x = null;
-      section_y = "";
-      section_z = null;
+      section_y = "%p%%";
+      section_z = "%{getfsize(expand('%:p'))}B %{wordcount().words}w";
 
       # Experimental
       experimental = 1;
@@ -41,7 +41,7 @@
       powerline_fonts = 0;
       symbols_ascii = 0;
       symbols = {
-        branch = "branch ";
+        branch = " ";
         linenr = "☰";
         colnr = " Col:";
       };
@@ -58,11 +58,11 @@
       # Statusline and tabline
       disable_statusline = 0;
       skip_empty_sections = 1;
-      stl_path_style = "short";
+      stl_path_style = "full";
       statusline_ontop = 0;
 
       # Display
-      section_c_only_filename = 1;
+      section_c_only_filename = 0;
 
       # Performance
       highlighting_cache = 0;
