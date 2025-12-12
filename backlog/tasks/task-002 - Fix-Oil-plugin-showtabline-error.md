@@ -4,9 +4,11 @@ title: Fix Oil plugin showtabline error
 status: Done
 assignee: []
 created_date: '2025-12-12 05:45'
-updated_date: '2025-12-12 05:46'
+updated_date: '2025-12-12 05:47'
 labels:
   - bug
+  - oil
+  - plugin
 dependencies: []
 priority: high
 ---
