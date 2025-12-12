@@ -9,7 +9,7 @@
       direction = "float";
       float_opts = {
         border = "curved";
-        winblend = 3;
+        winblend = 0; # Fully opaque for maximum visibility
       };
       open_mapping = null; # Disable built-in mapping, use keymaps.nix instead
       size = 20;
