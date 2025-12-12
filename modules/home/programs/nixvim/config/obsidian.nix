@@ -21,7 +21,7 @@
         date_format = "%Y-%m-%d";
       };
       completion = {
-        nvim_cmp = true;
+        nvim_cmp = false;
       };
       ui = {
         enable = true;

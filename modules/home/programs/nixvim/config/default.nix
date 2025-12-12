@@ -25,7 +25,6 @@
      ./obsidian.nix
      ./airline.nix
      ./telescope.nix
-     ./tailwind-tools.nix
      ./harpoon.nix
     ./oil.nix
      ./oil-git-status.nix
