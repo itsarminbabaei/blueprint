@@ -200,11 +200,11 @@
       options = { desc = "Open in vertical split"; noremap = true; silent = true; };
     }
 
-    # File Explorer (Netrw)
+    # Snacks Explorer
     {
       mode = "n";
       key = "<leader>e";
-      action = "<Cmd>Explore<CR>";
+      action = "<Cmd>lua Snacks.explorer()<CR>";
       options = { desc = "File Explorer"; };
     }
     {
@@ -472,37 +472,37 @@
     {
       mode = "n";
       key = "<leader>xx";
-      action = "<cmd>Trouble diagnostics toggle<cr>";
+      action = "<Cmd>Trouble diagnostics toggle<cr>";
       options = { desc = "Diagnostics (Trouble)"; };
     }
     {
       mode = "n";
       key = "<leader>xX";
-      action = "<cmd>Trouble diagnostics toggle filter.buf=0<cr>";
+      action = "<Cmd>Trouble diagnostics toggle filter.buf=0<cr>";
       options = { desc = "Buffer Diagnostics (Trouble)"; };
     }
     {
       mode = "n";
       key = "<leader>cs";
-      action = "<cmd>Trouble symbols toggle focus=false<cr>";
+      action = "<Cmd>Trouble symbols toggle focus=false<cr>";
       options = { desc = "Symbols (Trouble)"; };
     }
     {
       mode = "n";
       key = "<leader>cl";
-      action = "<cmd>Trouble lsp toggle focus=false win.position=right<cr>";
+      action = "<Cmd>Trouble lsp toggle focus=false win.position=right<cr>";
       options = { desc = "LSP Definitions / references / ... (Trouble)"; };
     }
     {
       mode = "n";
       key = "<leader>xL";
-      action = "<cmd>Trouble loclist toggle<cr>";
+      action = "<Cmd>Trouble loclist toggle<cr>";
       options = { desc = "Location List (Trouble)"; };
     }
     {
       mode = "n";
       key = "<leader>xQ";
-      action = "<cmd>Trouble qflist toggle<cr>";
+      action = "<Cmd>Trouble qflist toggle<cr>";
       options = { desc = "Quickfix List (Trouble)"; };
     }
 
@@ -931,19 +931,13 @@
       action = "<Cmd>TmuxNavigateRight<CR>";
       options = { noremap = true; silent = true; };
     }
-    {
-      mode = "n";
-      key = "<C-\\>";
-      action = "<Cmd>TmuxNavigatePrevious<CR>";
-      options = { noremap = true; silent = true; };
-    }
 
-      # Note: Keymaps handled by supermaven.nix settings, not here
+    # Note: Keymaps handled by supermaven.nix settings, not here
     # These are for reference/documentation
     # <C-a> - Accept suggestion (configured in supermaven.nix)
     # <C-e> - Dismiss suggestion (configured in supermaven.nix)
     # <C-j> - Accept next word (configured in supermaven.nix)
-    ];
-    }
+  ];
+}
 
 
