@@ -13,7 +13,7 @@
         }
         {
           type = "dir";
-          header = ["   MRU ".(builtins.getEnv "PWD")];
+          header = ["   MRU ${builtins.getEnv "PWD"}"];
         }
         {
           type = "sessions";
@@ -46,10 +46,16 @@
         ""
         "                 Welcome to NixVim"
       ];
-      custom_footer = [
-        ""
-        "   " + (builtins.toString (builtins.length (builtins.attrNames (builtins.readDir "~/projects")))) + " projects | " + (builtins.toString (builtins.length (builtins.readDir "~/.config"))) + " configs"
-      ];
+      custom_footer.__raw = ''
+        function()
+          local projects = vim.fn.len(vim.fn.readdir(vim.fn.expand("~/projects")))
+          local configs = vim.fn.len(vim.fn.readdir(vim.fn.expand("~/.config")))
+          return {
+            "",
+            "   Projects: " .. projects .. " | Configs: " .. configs
+          }
+        end
+      '';
     };
   };
 }
