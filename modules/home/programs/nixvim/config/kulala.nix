@@ -21,6 +21,11 @@
         show_request_summary = true;
       };
 
+      # Disable tree-sitter to avoid compilation issues in Nix
+      treesitter = {
+        enable = false;
+      };
+
       # Keybindings (can be customized)
       mappings = {
         run_all = "<C-k>";
