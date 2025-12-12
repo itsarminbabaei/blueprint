@@ -22,5 +22,19 @@
   };
 
   # Load the blueprint
-  outputs = inputs: inputs.blueprint { inherit inputs; };
+  outputs = inputs:
+    let
+      blueprintOutputs = inputs.blueprint { inherit inputs; };
+    in
+    blueprintOutputs // {
+      # Add NixVim documentation server
+      apps = blueprintOutputs.apps or {} // {
+        aarch64-darwin.nixvim-docs = {
+          type = "app";
+          program = "${inputs.nixvim.packages.aarch64-darwin.serve-docs}/bin/serve-docs";
+        };
+      };
+
+      # TODO: Add NixVim config checks when API is clarified
+    };
 }
