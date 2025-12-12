@@ -936,7 +936,7 @@
     # These are for reference/documentation
     # <C-a> - Accept suggestion (configured in supermaven.nix)
     # <C-e> - Dismiss suggestion (configured in supermaven.nix)
-    # <C-j> - Accept next word (configured in supermaven.nix)
+    # <C-n> - Accept next word (configured in supermaven.nix)
   ];
 }
 

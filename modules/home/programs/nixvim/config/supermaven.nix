@@ -9,7 +9,7 @@
       keymaps = {
         accept_suggestion = "<C-a>";
         clear_suggestion = "<C-e>";
-        accept_word = "<C-j>";
+        accept_word = "<C-n>";
       };
       ignore_filetypes = {
         markdown = false;
