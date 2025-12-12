@@ -4,9 +4,11 @@ title: Fix airline full file path display
 status: Done
 assignee: []
 created_date: '2025-12-12 05:45'
-updated_date: '2025-12-12 05:45'
+updated_date: '2025-12-12 05:47'
 labels:
   - ui
+  - airline
+  - bug
 dependencies: []
 priority: medium
 ---
