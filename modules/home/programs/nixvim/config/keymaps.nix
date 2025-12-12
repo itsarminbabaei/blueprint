@@ -253,7 +253,7 @@
     {
       mode = "n";
       key = "<leader>uL";
-      action = "<Cmd>lua Snacks.toggle.option('relativenumber', { name = 'Relative Number' }):toggle()<CR>";
+      action = "<Cmd>set relativenumber!<CR>";
       options = { desc = "Toggle Relative Number"; };
     }
     {
@@ -265,7 +265,7 @@
     {
       mode = "n";
       key = "<leader>ul";
-      action = "<Cmd>lua Snacks.toggle.line_number():toggle()<CR>";
+      action = "<Cmd>set number!<CR>";
       options = { desc = "Toggle Line Number"; };
     }
     {
