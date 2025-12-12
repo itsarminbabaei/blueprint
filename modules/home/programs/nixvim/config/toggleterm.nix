@@ -11,7 +11,7 @@
         border = "curved";
         winblend = 3;
       };
-      open_mapping = "[[<C-\\>]]";
+      open_mapping = null; # Disable built-in mapping, use keymaps.nix instead
       size = 20;
     };
   };
