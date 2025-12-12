@@ -6,15 +6,9 @@
   plugins.toggleterm = {
     enable = true;
     settings = {
-      direction = "float";
-      float_opts = {
-        border = "double";
-        winblend = 5; # Slight transparency to show it's floating
-        width = 120;
-        height = 30;
-      };
+      direction = "horizontal"; # Terminal appears at bottom, under buffers
       open_mapping = null; # Disable built-in mapping, use keymaps.nix instead
-      size = 20;
+      size = 15; # Reasonable height for horizontal terminal
     };
   };
 }
