@@ -8,8 +8,10 @@
     settings = {
       direction = "float";
       float_opts = {
-        border = "curved";
-        winblend = 0; # Fully opaque for maximum visibility
+        border = "double";
+        winblend = 5; # Slight transparency to show it's floating
+        width = 120;
+        height = 30;
       };
       open_mapping = null; # Disable built-in mapping, use keymaps.nix instead
       size = 20;
