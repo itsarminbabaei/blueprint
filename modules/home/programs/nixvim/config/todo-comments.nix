@@ -33,7 +33,7 @@
         before = "";
         keyword = "wide";
         after = "fg";
-        pattern = [[.*<(KEYWORDS)\s*:]];
+        pattern = "\\b(KEYWORDS):";
         comments_only = true;
         max_line_len = 400;
         exclude = [];
@@ -55,7 +55,7 @@
           "--line-number"
           "--column"
         ];
-        pattern = [[\b(KEYWORDS):]];
+        pattern = "\\b(KEYWORDS):";
       };
     };
   };
