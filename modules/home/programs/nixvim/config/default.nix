@@ -48,7 +48,6 @@
      ./todo-comments.nix
      ./comment.nix
      ./sleuth.nix
-     ./spectre.nix
      ./fidget.nix
     ./lazydev.nix
     ./editorconfig.nix

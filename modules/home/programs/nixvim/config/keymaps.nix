@@ -505,25 +505,7 @@
       options = { desc = "Quickfix List (Trouble)"; };
     }
 
-    # Spectre (Find & Replace)
-    {
-      mode = "n";
-      key = "<leader>R";
-      action = "<Cmd>lua require('spectre').open()<CR>";
-      options = { desc = "Open Spectre"; };
-    }
-    {
-      mode = "n";
-      key = "<leader>rw";
-      action = "<Cmd>lua require('spectre').open_visual({select_word=true})<CR>";
-      options = { desc = "Search current word"; };
-    }
-    {
-      mode = "n";
-      key = "<leader>rf";
-      action = "<Cmd>lua require('spectre').open_file_search()<CR>";
-      options = { desc = "Search in current file"; };
-    }
+
 
     # Color Tools
     {

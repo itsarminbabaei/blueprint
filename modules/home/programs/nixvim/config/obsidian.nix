@@ -6,6 +6,7 @@
   plugins.obsidian = {
     enable = true;
     settings = {
+      legacy_commands = false; # Disable deprecated legacy commands
       workspaces = [
         {
           name = "personal";

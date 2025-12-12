@@ -24,6 +24,8 @@
     globals.mapleader = " ";
     imports = [ ./programs/nixvim/config/default.nix ];
 
+    plugins.spectre.enable = false; # Disable Spectre due to ARM64 build issues
+
     lsp.servers = {
       gopls.enable = true;
       ts_ls.enable = true;
