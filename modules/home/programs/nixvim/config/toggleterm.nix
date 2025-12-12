@@ -6,9 +6,8 @@
   plugins.toggleterm = {
     enable = true;
     settings = {
-      direction = "horizontal"; # Terminal appears at bottom, under buffers
+      direction = "float";
       open_mapping = null; # Disable built-in mapping, use keymaps.nix instead
-      size = 15; # Reasonable height for horizontal terminal
     };
   };
 }
