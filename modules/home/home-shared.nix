@@ -100,6 +100,11 @@
     pkgs.nerd-fonts.geist-mono
     pkgs.nerd-fonts.symbols-only
 
+    # Nix Package
+    pkgs.nh
+    pkgs.lolcat
+    pkgs.cowsay
+
   ]
   ++ (
     # you can access the host configuration using osConfig.
