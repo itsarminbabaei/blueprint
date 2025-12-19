@@ -15,7 +15,13 @@
       };
 
       sources = {
-        default = ["lsp" "path" "snippets" "buffer" "supermaven"];
+        default = [
+          "lsp"
+          "path"
+          "snippets"
+          "buffer"
+          "supermaven"
+        ];
         providers = {
           supermaven = {
             name = "supermaven";
@@ -25,7 +31,7 @@
         };
       };
 
-      keymap."<C-f>" = [];
+      keymap."<C-f>" = [ ];
       cmdline.enabled = false;
 
       completion = {
@@ -35,7 +41,10 @@
           draw = {
             columns = [
               [ "kind_icon" ]
-              [ "label" "label_description" ]
+              [
+                "label"
+                "label_description"
+              ]
               [ "kind" ]
             ];
           };

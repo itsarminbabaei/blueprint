@@ -1,4 +1,9 @@
-{ pkgs, osConfig, inputs, ... }:
+{
+  pkgs,
+  osConfig,
+  inputs,
+  ...
+}:
 {
   # Disable version mismatch warning for unstable branches
   home.enableNixpkgsReleaseCheck = false;
@@ -35,78 +40,71 @@
     };
   };
 
-  home.packages =
-    [ 
-      pkgs.home-manager
-      pkgs.ripgrep
-      
-      # Terminal/shell tools
-      pkgs.tmux
-      pkgs.zellij
-      pkgs.starship
-      pkgs.lazygit
-      pkgs.lazydocker
-      pkgs.gh
-      
-      # Development tools
-      pkgs.rustup
-      pkgs.bun
-      pkgs.pnpm
-      pkgs.nodePackages.mermaid-cli
-      
-      # Formatters & Tools
-      pkgs.biome
-      pkgs.stylua
-      pkgs.shfmt
-      pkgs.go
-      pkgs.nodePackages.typescript-language-server
-      pkgs.gotools
-      
-      # Image & document tools
-      pkgs.imagemagick
-      pkgs.ghostscript
-      pkgs.texlive.combined.scheme-basic
-      
-      # CLI utilities
-      pkgs.fzf
-      pkgs.fd
-      pkgs.bat
-      pkgs.eza
-      pkgs.btop
-      pkgs.jq
-      pkgs.jnv
-      pkgs.zoxide
-      pkgs.yazi
-      pkgs.trash-cli
-      pkgs.curl
-      pkgs.wget
-      pkgs.httpie
-      pkgs.httpstat
-      pkgs.npkill
-      
-      # Cloud & Infrastructure
-      pkgs.awscli2
-      pkgs.amazon-q-cli
-      pkgs.google-cloud-sdk
-      pkgs.openssh
-      pkgs.sshpass
-      pkgs.autossh
-      
-      # Fonts
-      pkgs.nerd-fonts.geist-mono
-      pkgs.nerd-fonts.symbols-only
+  home.packages = [
+    pkgs.home-manager
+    pkgs.ripgrep
 
-      # AI tools (from nix-ai-tools flake)
-      inputs.nix-ai-tools.packages.${pkgs.stdenv.system}.amp
-      inputs.nix-ai-tools.packages.${pkgs.stdenv.system}.claude-code
-      # inputs.nix-ai-tools.packages.${pkgs.stdenv.system}.droid        # Disabled - not used
-      # inputs.nix-ai-tools.packages.${pkgs.stdenv.system}.gemini-cli  # Temporarily disabled due to npm registry issues
-      # inputs.nix-ai-tools.packages.${pkgs.stdenv.system}.goose-cli   # Temporarily disabled due to potential build issues
-    ]
-    ++ (
-      # you can access the host configuration using osConfig.
-      pkgs.lib.optionals (osConfig.programs.vim.enable && pkgs.stdenv.isDarwin) [ pkgs.skhd ]
-    );
+    # Terminal/shell tools
+    pkgs.tmux
+    pkgs.zellij
+    pkgs.starship
+    pkgs.lazygit
+    pkgs.lazydocker
+    pkgs.gh
+
+    # Development tools
+    pkgs.rustup
+    pkgs.bun
+    pkgs.pnpm
+    pkgs.nodePackages.mermaid-cli
+
+    # Formatters & Tools
+    pkgs.biome
+    pkgs.stylua
+    pkgs.shfmt
+    pkgs.go
+    pkgs.nodePackages.typescript-language-server
+    pkgs.gotools
+
+    # Image & document tools
+    pkgs.imagemagick
+    pkgs.ghostscript
+    pkgs.texlive.combined.scheme-basic
+
+    # CLI utilities
+    pkgs.fzf
+    pkgs.fd
+    pkgs.bat
+    pkgs.eza
+    pkgs.btop
+    pkgs.jq
+    pkgs.jnv
+    pkgs.zoxide
+    pkgs.yazi
+    pkgs.trash-cli
+    pkgs.curl
+    pkgs.wget
+    pkgs.httpie
+    pkgs.httpstat
+    pkgs.npkill
+
+    # Cloud & Infrastructure
+    pkgs.awscli2
+    pkgs.amazon-q-cli
+    pkgs.google-cloud-sdk
+    pkgs.openssh
+    pkgs.sshpass
+    pkgs.autossh
+
+    # Fonts
+    pkgs.nerd-fonts.geist-mono
+    pkgs.nerd-fonts.symbols-only
+
+  ]
+  ++ (
+    # you can access the host configuration using osConfig.
+    pkgs.lib.optionals (osConfig.programs.vim.enable && pkgs.stdenv.isDarwin) [ pkgs.skhd ]
+  );
 
   home.stateVersion = "24.11"; # initial home-manager state
 }

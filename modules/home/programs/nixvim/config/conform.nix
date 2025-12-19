@@ -7,22 +7,25 @@
     enable = true;
     settings = {
       formatters_by_ft = {
-        go = ["goimports" "gofmt"];
-        javascript = ["biome"];
-        typescript = ["biome"];
-        javascriptreact = ["biome"];
-        typescriptreact = ["biome"];
-        json = ["biome"];
-        jsonc = ["biome"];
-        yaml = ["biome"];
-        markdown = ["biome"];
-        html = ["biome"];
-        css = ["biome"];
-        scss = ["biome"];
-        lua = ["stylua"];
-        sh = ["shfmt"];
-        bash = ["shfmt"];
-        dotenv = ["shfmt"];
+        go = [
+          "goimports"
+          "gofmt"
+        ];
+        javascript = [ "biome" ];
+        typescript = [ "biome" ];
+        javascriptreact = [ "biome" ];
+        typescriptreact = [ "biome" ];
+        json = [ "biome" ];
+        jsonc = [ "biome" ];
+        yaml = [ "biome" ];
+        markdown = [ "biome" ];
+        html = [ "biome" ];
+        css = [ "biome" ];
+        scss = [ "biome" ];
+        lua = [ "stylua" ];
+        sh = [ "shfmt" ];
+        bash = [ "shfmt" ];
+        dotenv = [ "shfmt" ];
       };
       default_format_opts = {
         lsp_format = "fallback";

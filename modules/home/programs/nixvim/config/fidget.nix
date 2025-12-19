@@ -5,6 +5,6 @@
 {
   plugins.fidget = {
     enable = true;
-    settings = {};
+    settings = { };
   };
 }

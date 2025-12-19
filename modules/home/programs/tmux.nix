@@ -10,7 +10,7 @@
     baseIndex = 1;
     mouse = true;
     escapeTime = 10;
-    
+
     plugins = with pkgs.tmuxPlugins; [
       {
         plugin = dracula;

@@ -5,6 +5,6 @@
 {
   plugins.persistence = {
     enable = true;
-    settings = {};
+    settings = { };
   };
 }

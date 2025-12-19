@@ -23,7 +23,7 @@
           update_n_lines = null;
         };
       };
-      pairs = {};
+      pairs = { };
     };
   };
 }

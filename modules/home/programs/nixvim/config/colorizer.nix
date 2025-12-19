@@ -20,7 +20,7 @@
         tailwind = true;
         sass = {
           enable = true;
-          parsers = ["css"];
+          parsers = [ "css" ];
         };
         virtualtext = "■";
       };

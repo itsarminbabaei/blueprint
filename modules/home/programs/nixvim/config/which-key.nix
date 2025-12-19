@@ -163,10 +163,10 @@
           __unkeyed-1 = "<leader>bD";
           desc = "Force delete buffer";
         }
-          {
-            __unkeyed-1 = "<leader>fh";
-            desc = "Help tags";
-          }
+        {
+          __unkeyed-1 = "<leader>fh";
+          desc = "Help tags";
+        }
         {
           __unkeyed-1 = "<leader>ft";
           desc = "Find TODOs";
@@ -372,7 +372,6 @@
           desc = "Location List";
         }
 
-
         # Code Viewing
         {
           __unkeyed-1 = "<leader>v";
@@ -503,19 +502,25 @@
         {
           __unkeyed-1 = "a";
           group = "Text Objects (outer)";
-          mode = ["o" "x"];
+          mode = [
+            "o"
+            "x"
+          ];
         }
         {
           __unkeyed-1 = "i";
           group = "Text Objects (inner)";
-          mode = ["o" "x"];
+          mode = [
+            "o"
+            "x"
+          ];
         }
 
         # Supermaven (AI Completion)
         {
           __unkeyed-1 = "<C-a>";
           group = "Supermaven";
-          mode = ["i"];
+          mode = [ "i" ];
           hidden = true;
         }
       ];

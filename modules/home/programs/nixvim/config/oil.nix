@@ -71,7 +71,6 @@
         concealcursor = "nvic";
       };
 
-
     };
   };
 }

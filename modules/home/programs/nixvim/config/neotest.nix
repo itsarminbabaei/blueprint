@@ -6,7 +6,9 @@
   plugins.neotest = {
     enable = true;
     adapters = {
-      go = { enable = true; };
+      go = {
+        enable = true;
+      };
     };
     settings = {
       icons = {

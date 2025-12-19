@@ -14,7 +14,10 @@
     isNormalUser = true;
     description = "Armin Babaei";
     group = "wheel";
-    extraGroups = [ "networkmanager" "docker" ];
+    extraGroups = [
+      "networkmanager"
+      "docker"
+    ];
     shell = pkgs.fish;
   };
 

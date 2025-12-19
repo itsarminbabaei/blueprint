@@ -8,7 +8,12 @@
     settings = {
       enable_in_empty_buffers = 0;
       pad_right = 1;
-      markers = ["•" "◦" "▪" "▫"];
+      markers = [
+        "•"
+        "◦"
+        "▪"
+        "▫"
+      ];
       checkboxes = {
         unchecked = " ";
         checked = "x";

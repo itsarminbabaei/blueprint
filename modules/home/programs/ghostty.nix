@@ -2,6 +2,7 @@
   programs.ghostty = {
     enable = true;
     package = null; # Ghostty is installed via DMG on macOS, not managed by Nix
+    systemd.enable = false; # Disable systemd integration since package is null
     settings = {
       font-family = [
         "GeistMono Nerd Font Mono"

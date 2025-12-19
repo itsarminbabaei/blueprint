@@ -37,28 +37,28 @@
     ];
   };
 
-    extraConfigLua = ''
-      -- Register bash parser for .env files since they use shell variable syntax
-      vim.treesitter.language.register("bash", "dotenv")
+  extraConfigLua = ''
+    -- Register bash parser for .env files since they use shell variable syntax
+    vim.treesitter.language.register("bash", "dotenv")
 
-      -- Filetype detection for .env files
-      vim.filetype.add({
-        pattern = {
-          [".env.*"] = "dotenv",  -- .env.local, .env.production, etc.
-        },
-        filename = {
-          [".env"] = "dotenv",
-        },
-      })
+    -- Filetype detection for .env files
+    vim.filetype.add({
+      pattern = {
+        [".env.*"] = "dotenv",  -- .env.local, .env.production, etc.
+      },
+      filename = {
+        [".env"] = "dotenv",
+      },
+    })
 
-      -- Additional autocmd to ensure .env files are detected as dotenv
-      vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
-        pattern = { ".env*", ".env" },
-        callback = function()
-          vim.bo.filetype = "dotenv"
-        end,
-      })
-    '';
+    -- Additional autocmd to ensure .env files are detected as dotenv
+    vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+      pattern = { ".env*", ".env" },
+      callback = function()
+        vim.bo.filetype = "dotenv"
+      end,
+    })
+  '';
 
   plugins.treesitter-textobjects = {
     enable = true;

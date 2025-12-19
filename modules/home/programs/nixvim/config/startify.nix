@@ -9,29 +9,38 @@
       lists = [
         {
           type = "files";
-          header = ["   MRU"];
+          header = [ "   MRU" ];
         }
         {
           type = "dir";
-          header = ["   MRU ${builtins.getEnv "PWD"}"];
+          header = [ "   MRU ${builtins.getEnv "PWD"}" ];
         }
         {
           type = "sessions";
-          header = ["   Sessions"];
+          header = [ "   Sessions" ];
         }
         {
           type = "bookmarks";
-          header = ["   Bookmarks"];
+          header = [ "   Bookmarks" ];
         }
         {
           type = "commands";
-          header = ["   Commands"];
+          header = [ "   Commands" ];
         }
       ];
       bookmarks = [
-        { c = "~/projects"; f = 1; }
-        { v = "~/dotfiles"; f = 1; }
-        { z = "~/.zshrc"; f = 1; }
+        {
+          c = "~/projects";
+          f = 1;
+        }
+        {
+          v = "~/dotfiles";
+          f = 1;
+        }
+        {
+          z = "~/.zshrc";
+          f = 1;
+        }
       ];
       change_to_vcs_root = true;
       session_autoload = true;

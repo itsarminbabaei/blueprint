@@ -7,14 +7,22 @@
     enable = true;
 
     settings = {
-      bigfile = { enabled = true; };
-      dashboard = { enabled = false; };
+      bigfile = {
+        enabled = true;
+      };
+      dashboard = {
+        enabled = false;
+      };
       explorer = {
         enabled = true;
         cwd = true;
       };
-      indent = { enabled = false; };
-      input = { enabled = true; };
+      indent = {
+        enabled = false;
+      };
+      input = {
+        enabled = true;
+      };
       notifier = {
         enabled = true;
         timeout = 3000;
@@ -22,17 +30,31 @@
       picker = {
         enabled = true;
         sources = {
-          files = { hidden = true; };
-          explorer = { hidden = true; };
+          files = {
+            hidden = true;
+          };
+          explorer = {
+            hidden = true;
+          };
         };
       };
-      quickfile = { enabled = true; };
-      scope = { enabled = true; };
-      scroll = { enabled = true; };
-      statuscolumn = { enabled = true; };
-      words = { enabled = true; };
+      quickfile = {
+        enabled = true;
+      };
+      scope = {
+        enabled = true;
+      };
+      scroll = {
+        enabled = true;
+      };
+      statuscolumn = {
+        enabled = true;
+      };
+      words = {
+        enabled = true;
+      };
       styles = {
-        notification = {};
+        notification = { };
       };
     };
   };
