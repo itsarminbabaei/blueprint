@@ -139,11 +139,11 @@
      </h4>
      <pre><code># Search for packages
 nix search nixpkgs &lt;package-name&gt;</code></pre>
-     <h2></h2>
-     <br />
-     <h3>
-       <samp>
-         <b>Quick Start</b>
+    <h2></h2>
+    <br />
+    <h3>
+      <samp>
+        <b>Quick Start</b>
        </samp>
      </h3>
      <h4>
@@ -151,22 +151,26 @@ nix search nixpkgs &lt;package-name&gt;</code></pre>
          <b>macOS (Darwin)</b>
        </samp>
      </h4>
-     <pre><code># Format code
-nix fmt .
+  <pre><code>
+       # Format code
+      nix fmt .
+  </code></pre>
 
-# Update flake dependencies  
-nix flake update
+  <pre><code>
+      # Update flake dependencies
+    nix flake update
+  </code></pre>
 
-# Rebuild system
-sudo darwin-rebuild switch --flake .#darwin</code></pre>
-     <h4>
-       <samp>
-         <b>Linux (NixOS)</b>
-       </samp>
-     </h4>
-     <pre><code># Configuration in progress
-home-manager switch --flake .</code></pre>
-     <h2></h2>
+  <pre><code>
+    # Rebuild system
+    sudo darwin-rebuild switch --flake .#darwin
+  </code></pre>
+
+  <pre><code>
+    # Configuration in progress
+    home-manager switch --flake .
+  </code></pre>
+  <h2></h2>
      <br />
      <h3>
        <samp>
