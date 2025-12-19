@@ -1,323 +1,319 @@
-# Blueprint - A Nix-Based Development Environment
+<div align="justify">
+  <p align="left">
+    <strong>
+      <samp>「</samp>
+    </strong>
+  </p>
+  <p align="center">
+    <samp>
+      <b>
+        Blueprint
+        <br />
+        Terminal-First Nix Environment
+      </b>
+      <br />
+      <img
+        src="https://readme-typing-svg.demolab.com?font=Geist+Mono&size=16&pause=2000&color=ff79c6&center=true&vCenter=true&width=435&lines=nix+%E2%86%92+vim+%E2%86%90+terminal"
+        alt="Typing SVG"
+      />
+    </samp>
+  </p>
+  <p align="right">
+    <strong>
+      <samp>」</samp>
+    </strong>
+  </p>
+  <details>
+    <summary>
+      <samp>
+        <b>Overview</b>
+      </samp>
+    </summary>
+    <br />
+    <h2></h2>
+    <p align="left">
+      <samp>
+        A comprehensive, declarative development environment built on Nix. This Blueprint provides a complete terminal-first workflow with NixVim, AI coding assistants, and seamless cross-platform compatibility.
+        <br /><br />
+        Based on <a href="https://github.com/numtide/blueprint">Numtide's Blueprint</a>, extended with 59 NixVim plugins, AI tools, and personal configurations for an optimized development experience.
+      </samp>
+    </p>
+    <h2></h2>
+    <br />
+    <h3>
+      <samp>
+        <b>Stack</b>
+      </samp>
+    </h3>
+    <ul>
+      <li><samp><b>Core</b>: Nix, NixOS, Nix Darwin</samp></li>
+      <li><samp><b>Editor</b>: NixVim (59 plugins, Dracula theme)</samp></li>
+      <li><samp><b>Terminal</b>: Ghostty + Fish + Starship + tmux</samp></li>
+      <li><samp><b>AI Tools</b>: Claude Code, OpenCode, Gemini CLI, Amp, Crush, Goose CLI, KiloCode CLI, Mistral Vibe</samp></li>
+      <li><samp><b>Typography</b>: Geist Mono + Nerd Fonts</samp></li>
+      <li><samp><b>Management</b>: Backlog.md for human-AI collaboration</samp></li>
+    </ul>
+    <h2></h2>
+    <br />
+    <h3>
+      <samp>
+        <b>Features</b>
+      </samp>
+    </h3>
+    <ul>
+      <li><samp><b>59 NixVim plugins</b> configured declaratively</samp></li>
+      <li><samp><b>6 LSP servers</b> for Go, TypeScript, Lua, Bash, JSON, Nix</samp></li>
+      <li><samp><b>AI completion</b> with Supermaven (free tier available)</samp></li>
+      <li><samp><b>Dracula theme</b> with custom Denim variant in development</samp></li>
+      <li><samp><b>Cross-platform</b> support (macOS + Linux)</samp></li>
+      <li><samp><b>Documented</b> with 100+ keybindings via which-key</samp></li>
+    </ul>
+  </details>
+</div>
 
-**Blueprint** is a declarative, reproducible development environment built on [Nix](https://nixos.org) and [NixOS](https://nixos.org). It's based on [Numtide's Blueprint](https://github.com/numtide/blueprint), adapted and extended with personal configurations.
+## Installing Nix
 
-## What is Nix?
+### macOS
+Follow the official installation guide: [Install Nix on macOS](https://nix.dev/install-nix#install-nix)
 
-Nix is a purely functional package manager and programming language created by **Eelco Dolstra** in 2003. It treats packages and configurations as immutable, reproducible artifacts, enabling developers to describe their entire system state in code.
+### NixOS
+Learn how to configure NixOS: [NixOS Configuration Tutorial](https://nix.dev/tutorials/nixos/nixos-configuration-on-vm)
 
-**Why Nix matters:**
-- **Reproducibility**: Define your environment once, deploy it identically everywhere (laptop, server, team)
-- **Declarative**: System state is explicit code, not imperative commands
-- **Atomic Operations**: Updates and rollbacks are instant and safe
-- **Dependency Management**: No "dependency hell" — strict isolation and versioning
-- **Culture**: A vibrant community building the future of package management and system configuration
+## Nix Language Basics
 
-I'm deeply committed to the Nix ecosystem because it fundamentally changes how we think about software environments. Rather than "it works on my machine," you get "it works everywhere, guaranteed."
+The Nix language is designed for conveniently creating and composing derivations – precise descriptions of how contents of existing files are used to derive new files. It is a domain-specific, purely functional, lazily evaluated, dynamically typed programming language.
 
-## Current Status
+### Notable Uses of the Nix Language
 
-- **darwin**: Fully configured (x86_64 and arm64 support)
-- **nixos**: Work in progress
+**Nixpkgs**
+The largest, most up-to-date software distribution in the world, and written in the Nix language.
+
+**NixOS**
+A Linux distribution that can be configured fully declaratively and is based on Nix and Nixpkgs.
+
+Its underlying modular configuration system is written in the Nix language, and uses packages from Nixpkgs. The operating system environment and services it provides are configured with the Nix language.
+
+### Key Concepts
+- [Flakes](https://nix.dev/concepts/flakes) - Nix's package management system
+- [Nix Reference Manual](https://nix.dev/reference/nix-manual) - Complete language documentation
+
+### Package Search
+```bash
+# Search for packages
+nix search nixpkgs <package-name>
+```
 
 ## Quick Start
 
-### Darwin (macOS)
-
-Rebuild your system with:
+### macOS (Darwin)
 ```bash
-darwin-rebuild switch --flake .#darwin
+# Format code
+nix fmt .
+
+# Update flake dependencies  
+nix flake update
+
+# Rebuild system
+sudo darwin-rebuild switch --flake .#darwin
 ```
 
-Unlike traditional home-manager approaches, Blueprint uses [Nix Darwin](https://github.com/LnL7/nix-darwin) for macOS system configuration, providing deeper integration with macOS while maintaining Nix's declarative philosophy.
+### Linux (NixOS)
+```bash
+# Configuration in progress
+home-manager switch --flake .
+```
 
-### NixOS
+## Environment
 
-Coming soon. Current setup is validated on Darwin.
+### Terminal Stack
+- **Terminal**: Ghostty — Modern, GPU-accelerated terminal
+- **Shell**: Fish — Smart interactive shell with completions
+- **Prompt**: Starship — Fast, customizable prompt
+- **Multiplexer**: tmux — Terminal session management
 
-## Environment Overview
+### Editor Stack
+- **Editor**: NixVim — Neovim configured entirely in Nix
+- **Completion**: blink-cmp + LSP + AI + snippets
+- **Theme**: Dracula (main) + Denim (WIP custom theme)
+- **Plugins**: 59 plugins across completion, UI, navigation, and development
 
-### Terminal & Shell
-- **Terminal**: [Ghostty](https://github.com/ghostty-org/ghostty) — A modern, GPU-accelerated terminal
-- **Shell**: [Fish](https://github.com/fish-shell/fish-shell) — Friendly interactive shell with smart completions
-- **Prompt**: [Starship](https://github.com/starship/starship) — Minimal, blazing-fast cross-shell prompt
-- **Multiplexer**: [tmux](https://github.com/tmux/tmux) — Terminal multiplexer (primary)
-- **Alternative**: [Zellij](https://github.com/zellij-org/zellij) — User-friendly multiplexer (exploring)
-
-### Editor
-- **Editor**: [NixVim](https://github.com/nix-community/nixvim) — Neovim configured entirely in Nix
-- **Theme**: [Dracula](https://github.com/dracula/dracula-theme) (current)
-- **Custom Theme**: [Denim](https://arminbabaei.com/theme) (work in progress)
-
-The Denim theme is a personal tribute to denim culture — inspired by raw denim, salvage denim heritage, Japanese denim craftsmanship, and the intricate details of the Kapital brand. It's more than aesthetics; it's about bringing that timeless, worn-in quality to the dev environment.
-
-### Typography
-- **Primary Font**: [Geist Mono](https://vercel.com/font) — Clean, readable monospace font
-- **Enhancement**: [Nerd Fonts](https://www.nerdfonts.com/) — Extended icons and symbols
-
-### Project Management & AI Tools
-- **Backlog Tool**: [Backlog.md](https://github.com/MrLesk/Backlog.md) — Git-native collaboration between humans and AI agents
-- **AI Tools**: [Nix AI Tools](https://github.com/numtide/nix-ai-tools) (Numtide) — AI-powered utilities for the Nix ecosystem
+### Development Tools
+- **Version Control**: Git with lazygit integration
+- **AI Coding**: Claude Code, OpenCode, Gemini CLI, and more
+- **Project Management**: Backlog.md for task tracking
+- **Typography**: Geist Mono + Nerd Fonts icons
 
 ## NixVim Configuration
 
-Blueprint fully leverages [NixVim](https://github.com/nix-community/nixvim) for Neovim configuration. All settings are declarative, version-controlled, and reproducible.
+### Core Features
 
-### Completion Stack
+**Completion System**:
+- blink-cmp framework (0.5-4ms async completion)
+- LSP integration (6 language servers)
+- AI suggestions (Supermaven)
+- Snippet support (luasnip)
 
-**Core Integration**: blink-cmp (framework) + lspconfig (6 LSP servers) + supermaven (AI) + luasnip (snippets)
-
-The completion system is built on [blink-cmp](https://cmp.saghen.dev/), a modern, performant completion framework that aggregates multiple sources into a single, unified menu:
-
-- **LSP**: Real-time diagnostics and completions from language servers
-- **Paths**: File system path completion
-- **Snippets**: Code templates via luasnip
-- **Buffer**: Words from open buffers
-- **AI**: Supermaven AI-powered suggestions (free tier available)
-
-All sources are merged into a single menu with async fuzzy matching (0.5-4ms), typo resistance, and contextual awareness.
-
-**Keymaps**:
+**Key Bindings** (press `<leader>?` to explore):
 - `<C-space>` — Open completion menu
-- `<Tab>` / `<S-Tab>` — Navigate completions
-- `<CR>` — Accept selected completion
-- `<C-a>` — Accept AI suggestion (Supermaven)
-- `<C-e>` — Dismiss completion menu
-- `<C-j>` — Accept AI word suggestion (Supermaven)
+- `<leader>ff` — Find files (Telescope)
+- `<leader>cf` — Format code (conform)
+- `<leader>gd` — Go to definition (Trouble)
+- `<leader>gg` — Open LazyGit
 
-**First-time setup**:
-```
-:SupermavenUseFree
-:LspInfo
-```
+### Plugin Categories (59 total)
 
-### Project Structure
+**Completion**: blink-cmp, lspconfig, supermaven, luasnip
+**UI**: airline, bufferline, noice, which-key, snacks, fidget
+**Navigation**: telescope, harpoon, oil, tmux-navigator, flash
+**Code Quality**: conform, trouble, neotest, dap
+**Treesitter**: treesitter, context, twilight
+**Text Editing**: comment, mini, render-markdown
+**Utilities**: gitsigns, lazygit, persistence, sleuth, editorconfig
+
+### Language Support
+
+| Language | LSP Server | Features |
+|----------|------------|----------|
+| Go | gopls | Completion, diagnostics, refactoring |
+| TypeScript | ts_ls | Type checking, imports |
+| Lua | lua_ls | Neovim API awareness |
+| Bash | bashls | Linting, diagnostics |
+| JSON | jsonls | Schema validation |
+| Nix | nil_ls | Formatting, completions |
+
+## Installed Tools
+
+**System Packages** (from llm-agents):
+- claude-code, opencode, gemini-cli, amp, crush, goose-cli, kilocode-cli, mistral-vibe
+
+**Home Packages** (from home-shared.nix):
+- Terminal: tmux, starship, lazygit, gh
+- CLI: ripgrep, fzf, fd, bat, eza, btop, jq
+- Fonts: Geist Mono, Nerd Fonts symbols
+
+## NixVim Plugin Documentation
+
+All 59 plugins are documented at the official NixVim site:
+
+### UI & Interface Plugins
+- [airline](https://nix-community.github.io/nixvim/plugins/airline/) - Status line
+- [bufferline](https://nix-community.github.io/nixvim/plugins/bufferline/) - Tab bar
+- [noice](https://nix-community.github.io/nixvim/plugins/noice/) - Modern message UI
+- [which-key](https://nix-community.github.io/nixvim/plugins/which-key/) - Keybinding helper
+- [snacks](https://nix-community.github.io/nixvim/plugins/snacks/) - Utility collection
+- [fidget](https://nix-community.github.io/nixvim/plugins/fidget/) - LSP progress indicator
+- [startify](https://nix-community.github.io/nixvim/plugins/startify/) - Startup dashboard
+- [toggleterm](https://nix-community.github.io/nixvim/plugins/toggleterm/) - Terminal toggling
+- [render-markdown](https://nix-community.github.io/nixvim/plugins/render-markdown/) - Markdown display
+- [glow](https://nix-community.github.io/nixvim/plugins/glow/) - Markdown preview
+- [web-devicons](https://nix-community.github.io/nixvim/plugins/web-devicons/) - File icons
+- [colorscheme](https://nix-community.github.io/nixvim/plugins/colorscheme/) - Theme configuration
+
+### Navigation & File Management
+- [telescope](https://nix-community.github.io/nixvim/plugins/telescope/) - Fuzzy finder
+- [harpoon](https://nix-community.github.io/nixvim/plugins/harpoon/) - File bookmarks
+- [oil](https://nix-community.github.io/nixvim/plugins/oil/) - File explorer
+- [oil-git-status](https://nix-community.github.io/nixvim/plugins/oil-git-status/) - Git status for oil
+- [leap](https://nix-community.github.io/nixvim/plugins/leap/) - Motion plugin
+- [flash](https://nix-community.github.io/nixvim/plugins/flash/) - Enhanced motions
+- [tmux-navigator](https://nix-community.github.io/nixvim/plugins/tmux-navigator/) - Pane navigation
+- [navbuddy](https://nix-community.github.io/nixvim/plugins/navbuddy/) - Code structure browser
+- [aerial](https://nix-community.github.io/nixvim/plugins/aerial/) - Code outline
+- [arrow](https://nix-community.github.io/nixvim/plugins/arrow/) - Line bookmarks
+
+### Code Editing & Completion
+- [blink](https://nix-community.github.io/nixvim/plugins/blink/) - Completion framework
+- [conform](https://nix-community.github.io/nixvim/plugins/conform/) - Code formatting
+- [supermaven](https://nix-community.github.io/nixvim/plugins/supermaven/) - AI completion
+- [mini](https://nix-community.github.io/nixvim/plugins/mini/) - Lightweight utilities
+- [comment](https://nix-community.github.io/nixvim/plugins/comment/) - Comment toggling
+- [ts-autotag](https://nix-community.github.io/nixvim/plugins/ts-autotag/) - Auto tag closing
+- [lazydev](https://nix-community.github.io/nixvim/plugins/lazydev/) - Lua development
+- [keymaps](https://nix-community.github.io/nixvim/plugins/keymaps/) - Keybinding configuration
+
+### Language Support & LSP
+- [lspconfig](https://nix-community.github.io/nixvim/plugins/lspconfig/) - LSP integration
+- [treesitter](https://nix-community.github.io/nixvim/plugins/treesitter/) - Syntax engine
+- [treesitter-context](https://nix-community.github.io/nixvim/plugins/treesitter-context/) - Sticky headers
+- [navic](https://nix-community.github.io/nixvim/plugins/navic/) - Code location
+- [nix](https://nix-community.github.io/nixvim/plugins/nix/) - Nix language support
+
+### Code Quality & Debugging
+- [trouble](https://nix-community.github.io/nixvim/plugins/trouble/) - Diagnostics panel
+- [dap](https://nix-community.github.io/nixvim/plugins/dap/) - Debug adapter protocol
+- [neotest](https://nix-community.github.io/nixvim/plugins/neotest/) - Test runner
+- [todo-comments](https://nix-community.github.io/nixvim/plugins/todo-comments/) - TODO highlighting
+- [wtf](https://nix-community.github.io/nixvim/plugins/wtf/) - Diagnostic debugging
+
+### Git & Version Control
+- [gitsigns](https://nix-community.github.io/nixvim/plugins/gitsigns/) - Git decorations
+- [lazygit](https://nix-community.github.io/nixvim/plugins/lazygit/) - Git TUI
+- [persistence](https://nix-community.github.io/nixvim/plugins/persistence/) - Session management
+
+### Utilities & Tools
+- [bufdelete](https://nix-community.github.io/nixvim/plugins/bufdelete/) - Buffer deletion
+- [bullets](https://nix-community.github.io/nixvim/plugins/bullets/) - Bullet points
+- [pbcopy](https://nix-community.github.io/nixvim/plugins/pbcopy/) - System clipboard
+- [ccc](https://nix-community.github.io/nixvim/plugins/ccc/) - Color picker
+- [cloak](https://nix-community.github.io/nixvim/plugins/cloak/) - Secret masking
+- [colorizer](https://nix-community.github.io/nixvim/plugins/colorizer/) - Color highlighting
+- [kulala](https://nix-community.github.io/nixvim/plugins/kulala/) - HTTP client
+- [obsidian](https://nix-community.github.io/nixvim/plugins/obsidian/) - Note taking
+- [opencode](https://nix-community.github.io/nixvim/plugins/opencode/) - AI assistant
+- [sleuth](https://nix-community.github.io/nixvim/plugins/sleuth/) - Indent detection
+- [editorconfig](https://nix-community.github.io/nixvim/plugins/editorconfig/) - Project settings
+- [vim-dadbod](https://nix-community.github.io/nixvim/plugins/vim-dadbod/) - Database client
+- [vim-dadbod-completion](https://nix-community.github.io/nixvim/plugins/vim-dadbod-completion/) - DB completion
+- [vim-dadbod-ui](https://nix-community.github.io/nixvim/plugins/vim-dadbod-ui/) - DB UI
+
+## Project Structure
 
 ```
 blueprint/
 ├── modules/
-│   ├── home/
-│   │   ├── home-shared.nix          (Shell, LSP, fonts, packages)
+│   ├── home/                    # User environment configs
+│   │   ├── home-shared.nix      # Shared user packages & settings
 │   │   ├── programs/
-│   │   │   ├── nixvim/
-│   │   │   │   └── config/
-│   │   │   │       ├── default.nix          (Plugin imports)
-│   │   │   │       ├── blink.nix            (Completion framework + luasnip)
-│   │   │   │       ├── lspconfig.nix        (Language servers)
-│   │   │   │       ├── supermaven.nix       (AI completion)
-│   │   │   │       ├── keymaps.nix          (All keybindings)
-│   │   │   │       ├── which-key.nix        (Keymap groups & help)
-│   │   │   │       ├── colorscheme.nix      (Theme configuration)
-│   │   │   │       └── [28 other plugins]
-│   │   │   ├── fish.nix              (Shell configuration)
-│   │   │   ├── ghostty.nix           (Terminal settings)
-│   │   │   ├── starship.nix          (Prompt configuration)
-│   │   │   ├── tmux.nix              (Multiplexer config)
-│   │   │   ├── zellij.nix            (Zellij config)
-│   │   │   ├── git.nix               (Git settings)
-│   │   └── home-darwin.nix
-│   ├── darwin/
-│   └── nixos/
+│   │   │   ├── nixvim/          # NixVim configuration (59 plugins)
+│   │   │   │   └── config/      # Individual plugin configs
+│   │   │   ├── fish.nix         # Fish shell setup
+│   │   │   ├── ghostty.nix      # Terminal configuration
+│   │   │   ├── tmux.nix         # tmux settings
+│   │   │   └── starship.nix     # Prompt configuration
+│   │   └── home-darwin.nix      # macOS-specific user config
+│   ├── darwin/                  # macOS system configurations
+│   └── nixos/                   # Linux system configurations
 ├── hosts/
-│   ├── darwin/
-│   │   └── default.nix              (Darwin system config)
-│   └── nixos/
-├── flake.nix
-├── flake.lock
-├── cz.json
-└── README.md (this file)
+│   ├── darwin/default.nix       # Darwin system config
+│   └── nixos/                   # NixOS configurations
+├── flake.nix                    # Flake definition & inputs
+├── flake.lock                   # Dependency lock file
+└── README.md                    # This documentation
 ```
 
-### Installed Plugins (37 total)
+## Getting Started
 
-**Completion**: blink-cmp, blink-compat, luasnip, lspconfig, supermaven
+1. **First Launch**: Run `:SupermavenUseFree` in NixVim
+2. **Verify LSP**: Check `:LspInfo` for server status
+3. **Explore Keymaps**: Press `<leader>?` for interactive help
+4. **Customize**: Edit configs in `modules/home/programs/nixvim/config/`
+5. **Theme Preview**: Visit [arminbabaei.com/theme](https://arminbabaei.com/theme)
 
-**UI**: alpha, airline, bufferline, noice, which-key, snacks, fidget
-
-**Navigation**: telescope, harpoon, oil (+ oil-git-status), tmux-navigator, flash, navbuddy
-
-**Git**: gitsigns, lazygit
-
-**Code Quality**: conform, trouble, neotest, dap (+ dap-ui, dap-go, dap-virtual-text)
-
-**Treesitter**: treesitter, treesitter-textobjects, treesitter-context, twilight
-
-**Text Editing**: comment, mini (ai, surround, pairs), render-markdown
-
-**Other**: arrow, colorscheme, editorconfig, icons, lazydev, pbcopy, persistence, sleuth
-
-### Language Servers
-
-Configured in `modules/home/home-shared.nix` under `programs.nixvim.lsp.servers`.
-
-| Server | Languages | Features |
-|--------|-----------|----------|
-| gopls | Go | Completion, diagnostics, inlay hints, refactoring |
-| ts_ls | TypeScript/JavaScript | Type checking, imports, completions |
-| lua_ls | Lua | Vim API awareness, completions |
-| bashls | Bash | Linting, diagnostics, completions |
-| jsonls | JSON | Schema validation, completions |
-| nil_ls | Nix | Formatter awareness, completions |
-
-### Keymaps & Command Groups
-
-All keybindings are documented via [which-key](https://github.com/folke/which-key.nvim) (press `<leader>?` to view).
-
-**Core Navigation**:
-- `H` / `L` — Start/end of line
-- `j` / `k` — Smart vertical navigation (respects line wraps)
-- `J` / `K` (visual) — Move selection up/down
-- `<Left>` / `<Right>` — Previous/next buffer
-- `<C-h/j/k/l>` — tmux pane navigation
-- `<C-\>` — tmux previous pane
-
-**Search & Find** (`<leader>f`):
-- `ff` — Find files (Telescope)
-- `fw` — Find word (live grep)
-- `fb` — Find buffers
-- `fh` — Find help tags
-
-**File Navigation**:
-- `-` — Oil file explorer (parent directory)
-- `<leader>e` — Snacks file explorer
-- `<leader>h` + {a/m/1/2/3/4} — Harpoon bookmarks
-
-**LSP** (`<leader>c`):
-- `cf` — Format buffer
-- `cl` — LSP references
-- `cs` — Symbols
-- `gd` — Go to definition (Trouble)
-- `gr` — Go to references (Trouble)
-- `gi` — Go to implementation (Trouble)
-- `gy` — Go to type definition (Trouble)
-
-**Debugging** (`<leader>D`):
-- `b` — Toggle breakpoint
-- `c` — Continue
-- `si` — Step into
-- `so` — Step over
-- `u` — DAP UI toggle
-
-**Testing** (`<leader>t`):
-- `r` — Run nearest test
-- `f` — Run file tests
-- `s` — Toggle test summary
-
-**Git**:
-- `<leader>G` — Gitsigns (hunks, blame, staging)
-  - `k/j` — Previous/next hunk
-  - `p` — Preview hunk
-  - `s/u` — Stage/unstage
-  - `r/R` — Reset hunk/buffer
-  - `l` — Blame line
-  - `d` — Diff against HEAD
-- `<leader>g` — LazyGit
-- `<leader>GU` — Undo tree
-
-**Diagnostics** (`<leader>x`):
-- `x` — All diagnostics
-- `X` — Buffer diagnostics
-- `l` — LSP definitions/references
-- `L` — Location list
-- `Q` — Quickfix list
-
-**UI Toggles** (`<leader>u`):
-- `s` — Spelling
-- `w` — Line wrap
-- `L` — Relative line numbers
-- `l` — Line numbers
-- `d` — Diagnostics
-- `c` — Conceal level
-- `T` — Treesitter
-- `b` — Dark background
-- `h` — Inlay hints
-- `g` — Indent guides
-- `D` — Dim
-
-**Code Inspection** (`<leader>v`):
-- `v` — Init treesitter selection
-
-**Treesitter Text Objects** (outer/inner):
-- `af/if` — Function
-- `ac/ic` — Class
-- `ai/ii` — Conditional
-- `al/il` — Loop
-- `ap/ip` — Parameter
-- `[f/]f` — Previous/next function
-- `[c/]c` — Previous/next class
-- `[p/]p` — Previous/next parameter
-- `<leader>a/A` — Swap parameter with next/previous
-
-**Motion** (Flash):
-- `s` — Flash jump to character
-- `S` — Flash treesitter scope
-- `r` — Remote flash (operator pending)
-- `R` — Treesitter search
-- `<C-s>` (command mode) — Toggle flash search
-
-**Session Management** (`<leader>q`):
-- `s` — Load current session
-- `S` — Select session
-- `l` — Load last session
-- `d` — Disable persistence
-
-**Code Navigation**:
-- `<leader>nb` — Navbuddy (code structure browser)
-
-### Core Settings
-
-- **Leader key**: Space (`<space>`)
-- **Completion**: Async with typo tolerance
-- **Snippets**: luasnip preset
-- **Nerd Font**: Mono variant with full icon support
-- **Theme**: Dracula (with Denim WIP alternative)
-
-### Configuration Philosophy
-
-- **Declarative**: All config in Nix files
-- **Documented**: Each file has rationale and source links
-- **Minimal**: No external setup scripts needed
-- **Composable**: Plugins import cleanly, no conflicts
-- **Reproducible**: Exact environment guaranteed across machines
-- **Discoverable**: Keymaps documented with which-key and descriptions
-
-## Installed Packages
-
-From `home-shared.nix`:
-
-**Terminal & Shell**: tmux, zellij, starship, lazygit, lazydocker, gh
-
-**CLI Utilities**: ripgrep, fzf, fd, bat, eza, btop, jq, zoxide, yazi
-
-**Fonts**: Geist Mono, Nerd Fonts symbols-only
-
-**AI Tools** (from nix-ai-tools): amp, catnip, claude-code, droid, forge, gemini-cli, goose-cli, qwen-code
-
-## Key References
+## References
 
 ### Nix Ecosystem
 - [Nix Manual](https://nixos.org/manual/nix/stable/)
-- [NixOS Manual](https://nixos.org/manual/nixos/stable/)
-- [Nix Darwin](https://github.com/LnL7/nix-darwin)
+- [NixVim Documentation](https://nix-community.github.io/nixvim/)
+- [Numtide Blueprint](https://github.com/numtide/blueprint)
 
-### NixVim & Editor
-- [NixVim Docs](https://nix-community.github.io/nixvim/)
+### Key Projects
+- [Ghostty Terminal](https://github.com/ghostty-org/ghostty)
 - [blink-cmp](https://cmp.saghen.dev/)
-- [LSPConfig](https://github.com/neovim/nvim-lspconfig)
-- [Supermaven](https://github.com/supermaven-inc/supermaven-nvim)
-- [which-key](https://github.com/folke/which-key.nvim)
-- [Trouble](https://github.com/folke/trouble.nvim)
+- [Supermaven AI](https://github.com/supermaven-inc/supermaven-nvim)
+- [Backlog.md](https://github.com/MrLesk/Backlog.md)
 
-### Source Projects
-- [Numtide Blueprint](https://github.com/numtide/blueprint) — The original template this is based on
-- [Numtide Nix AI Tools](https://github.com/numtide/nix-ai-tools) — AI integrations
+---
 
-## Next Steps
-
-1. Run `:SupermavenUseFree` in NixVim to activate AI completion
-2. Check `:LspInfo` to verify all language servers are running
-3. Press `<leader>?` to view all keybindings organized by group
-4. Review plugin configs in `modules/home/programs/nixvim/config/` for customization
-5. Customize Fish shell in `modules/home/programs/fish.nix`
-6. Check out the Denim theme preview at [arminbabaei.com/theme](https://arminbabaei.com/theme)
-7. Monitor NixOS configuration progress in `modules/nixos/`
+<div align="center">
+  <samp>Built with Nix • Styled for the terminal</samp>
+</div>

@@ -28,6 +28,11 @@
         show_hidden = true;
         is_hidden_file.__raw = ''
           function(name, bufnr)
+            -- Don't hide .env files even though they start with "."
+            if vim.startswith(name, ".env") then
+              return false
+            end
+            -- Hide other dotfiles
             return vim.startswith(name, ".")
           end
         '';

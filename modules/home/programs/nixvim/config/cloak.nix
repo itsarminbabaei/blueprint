@@ -18,6 +18,11 @@
           replace = null;
         }
         {
+          file_pattern = "dotenv";
+          cloak_pattern = "=.+";
+          replace = null;
+        }
+        {
           file_pattern = "*.md";
           cloak_pattern = "password:.+";
           replace = null;

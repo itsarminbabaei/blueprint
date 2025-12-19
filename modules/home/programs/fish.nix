@@ -35,6 +35,22 @@
 
     shellInit = ''
       set fish_greeting ""
+
+      # API Keys and Cloud Project Configuration
+      set -x GEMINI_API_KEY (skate get GEMINI_API_KEY)
+      set -x GOOGLE_CLOUD_PROJECT (skate get google_cloud_project)
+      set -x GOOGLE_CLOUD_PROJECT_ID (skate get google_cloud_project_id)
+      set -x ANTHROPIC_API_KEY (skate get anthropic_api_key)
+      set -x XAI_API_KEY (skate get xai_api_key)
+
+      # Automatically export all skate keys as environment variables
+      for line in (skate list)
+          set -l key (echo $line | cut -f1)
+          set -l value (echo $line | cut -f2)
+          # Convert key to uppercase and replace dashes with underscores for env var naming
+          set -l env_name (echo $key | tr '[:lower:]' '[:upper:]' | tr '-' '_')
+          set -x $env_name $value
+      end
     '';
 
     interactiveShellInit = ''

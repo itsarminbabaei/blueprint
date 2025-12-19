@@ -22,6 +22,7 @@
         lua = ["stylua"];
         sh = ["shfmt"];
         bash = ["shfmt"];
+        dotenv = ["shfmt"];
       };
       default_format_opts = {
         lsp_format = "fallback";

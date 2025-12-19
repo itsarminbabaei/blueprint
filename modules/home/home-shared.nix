@@ -99,9 +99,9 @@
       # AI tools (from nix-ai-tools flake)
       inputs.nix-ai-tools.packages.${pkgs.stdenv.system}.amp
       inputs.nix-ai-tools.packages.${pkgs.stdenv.system}.claude-code
-      inputs.nix-ai-tools.packages.${pkgs.stdenv.system}.droid
-      inputs.nix-ai-tools.packages.${pkgs.stdenv.system}.gemini-cli
-      inputs.nix-ai-tools.packages.${pkgs.stdenv.system}.goose-cli
+      # inputs.nix-ai-tools.packages.${pkgs.stdenv.system}.droid        # Disabled - not used
+      # inputs.nix-ai-tools.packages.${pkgs.stdenv.system}.gemini-cli  # Temporarily disabled due to npm registry issues
+      # inputs.nix-ai-tools.packages.${pkgs.stdenv.system}.goose-cli   # Temporarily disabled due to potential build issues
     ]
     ++ (
       # you can access the host configuration using osConfig.

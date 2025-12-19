@@ -17,18 +17,20 @@
     nixvim.url = "github:nix-community/nixvim";
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
 
-    nix-ai-tools.url = "github:numtide/nix-ai-tools";
-    nix-ai-tools.inputs.nixpkgs.follows = "nixpkgs";
+    llm-agents.url = "github:numtide/llm-agents.nix";
+    llm-agents.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   # Load the blueprint
-  outputs = inputs:
+  outputs =
+    inputs:
     let
       blueprintOutputs = inputs.blueprint { inherit inputs; };
     in
-    blueprintOutputs // {
+    blueprintOutputs
+    // {
       # Add NixVim documentation server
-      apps = blueprintOutputs.apps or {} // {
+      apps = blueprintOutputs.apps or { } // {
         aarch64-darwin.nixvim-docs = {
           type = "app";
           program = "${inputs.nixvim.packages.aarch64-darwin.serve-docs}/bin/serve-docs";
