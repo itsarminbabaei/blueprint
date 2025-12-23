@@ -151,25 +151,22 @@ nix search nixpkgs &lt;package-name&gt;</code></pre>
          <b>macOS (Darwin)</b>
        </samp>
      </h4>
-  <pre><code>
-       # Format code
-      nix fmt .
-  </code></pre>
-
-  <pre><code>
-      # Update flake dependencies
-    nix flake update
-  </code></pre>
-
-  <pre><code>
-    # Rebuild system
-    sudo darwin-rebuild switch --flake .#darwin
-  </code></pre>
-
-  <pre><code>
-    # Configuration in progress
-    home-manager switch --flake .
-  </code></pre>
+<pre><code>
+# Format code
+nix fmt .
+</code></pre>
+<pre><code>
+# Update flake dependencies
+nix flake update
+</code></pre>  
+<pre><code>
+# Rebuild system
+sudo darwin-rebuild switch --flake .#darwin
+</code></pre>
+<pre><code>
+# Configuration in progress
+home-manager switch --flake .
+</code></pre>
   <h2></h2>
      <br />
      <h3>
